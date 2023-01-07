@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE/main.css">
+    <script src="https://kit.fontawesome.com/78f0a022bd.js" crossorigin="anonymous"></script>
+    <title>Sign-up</title>
+</head>
+<body>
+    <main>
+        <form class="sign-up">
+
+            <!--First Name ------------------------------------------------------- -->
+            <div class="input" onkeyup="validateInput(0)">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <input type="text" name="f-name" id="f-name" placeholder="First Name">
+
+                <div class="error">
+                    <div class="icon-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="msg-error">First Name cannot be empty</p>
+                </div>
+                <div class="correct">
+                    <div class="icon-correct"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <!--Last Name ------------------------------------------------------- -->
+            <div class="input" onkeyup="validateInput(1)">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <input type="text" name="l-name" id="l-name" placeholder="Last Name">
+
+                <div class="error">
+                    <div class="icon-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="msg-error">Last Name cannot be empty</p>
+                </div>
+                <div class="correct">
+                    <div class="icon-correct"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <!--Telephone ------------------------------------------------------- -->
+            <div class="input" onkeyup="validateInput(2)">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <input type="text" name="telephone" id="telephone" placeholder="(00) 0000-0000">
+
+                <div class="error">
+                    <div class="icon-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="msg-error">Telephone cannot be empty</p>
+                </div>
+                <div class="correct">
+                    <div class="icon-correct"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <!--Email ------------------------------------------------------- -->
+            <div class="input" onkeyup="validateInput(3)">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <input type="text" name="email" id="email" placeholder="Email Address">
+
+                <div class="error">
+                    <div class="icon-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="msg-error">Email address cannot be empty</p>
+                </div>
+                <div class="correct">
+                    <div class="icon-correct"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <!--password ------------------------------------------------------- -->
+            <div class="input" onkeyup="validateInput(4)">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                <input type="password" name="password" id="password" placeholder="Password">
+
+                <div class="error">
+                    <div class="icon-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="msg-error">Password cannot be empty</p>
+                </div>
+                <div class="correct">
+                    <div class="icon-correct"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <button class="btn-sign-up" aria-label="Sign up for an account">Sign up</button>
+         </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

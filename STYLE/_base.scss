@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+
+$font-primary: 'Raleway', sans-serif;
+$color-primary: hsl(125, 80%, 60%); 
+$color-secondary: hsl(0, 80%, 60%);
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1{
+        font-family: $font-primary;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        color: rgb(41, 41, 41);
+    }
+
+    .sign-up{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 450px;
+        padding: 1rem;
+
+        .input{
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.411);
+            padding: 0.2rem;
+            position: relative;
+            
+            .icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 50px;
+                background-color: hsl(209, 80%, 70%);
+                border-radius: 5px;
+                color: white;
+
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+
+            &.active-correct{
+                border-color: $color-primary; 
+                .icon{
+                    background-color:$color-primary; 
+                }
+                .correct{
+                    display: block;
+                }
+            } 
+
+            &.active-error{
+                border-color:$color-secondary;  
+                .icon{
+                    background-color:$color-secondary;  
+                }
+                .error{
+                    display: block;
+                }  
+            }
+
+            .correct{
+                display: none;
+                color: $color-primary; 
+            }
+
+            .error{
+                display: none;
+                color: $color-secondary;  
+                .msg-error{
+                    position: absolute;
+                    right: 0px;
+                    top: 100%;
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    font-family: $font-primary;
+                }
+            }
+
+            .icon-error, .icon-correct{
+                position: absolute;
+                font-size: 1.3rem;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        input{
+            width: 100%;
+            padding: 0rem 2.5rem 0rem 1rem;
+            font-family: sans-serif;
+            color:rgb(49, 49, 49);
+            font-size: 1rem;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }   
+        }
+        
+        .btn-sign-up{
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            background-color: hsl(209, 80%, 60%);
+            color: white;
+            font-size: 1.2rem;
+            font-family: $font-primary;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 1rem;
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: calc(100% + 3px);
+                background-color: hsl(220, 80%, 50%);
+                top: 0px;
+                left: 0px;
+                z-index: -2;
+                border-radius: 5px;
+            }
+
+            &:active{
+                background-color: hsl(209, 80%, 60%);
+                transform: translateY(3px);
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
